@@ -4,7 +4,7 @@ const jsonParser = bodyParser.json()
 const app = express()
 const cors = require('cors')
 const middleware = cors()
-const port = 4000
+const port = process.env.PORT  || 4000
 const router = require('./db')
 
 app.use(middleware)
